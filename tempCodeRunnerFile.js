@@ -1,0 +1,1 @@
+console.log(greatest_div(202132,1239012))
