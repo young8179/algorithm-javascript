@@ -51,7 +51,7 @@ function equalTarget(array, target){
         }
         
     }
-    return "no equal number with target"
+    return "no duplicates"
 }
 
 const inputArray = [2, 7, 11, 15]
@@ -72,4 +72,5 @@ function reversingString(string){
 }
 
 const inputS = "hello world"
+console.log(inputS.split("").reverse().join(""))
 console.log(reversingString(inputS))
