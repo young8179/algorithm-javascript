@@ -15,7 +15,10 @@ function whatIsInAName(collection, source) {
     })
 }
            
-           
+/* 
+A new array with the elements that pass the test. 
+If no elements pass the test, an empty array will be returned.
+*/           
    
 
   console.log(whatIsInAName([{ "apple": 1, "bat": 2 }, { "apple": 1 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "cookie": 2 }))
