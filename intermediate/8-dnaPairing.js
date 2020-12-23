@@ -11,7 +11,7 @@ function pairElement(str) {
         G: ["G", "C"],
         T: ["T", "A"]
     }
-    let strArray = str.split("").map(element =>{
+    str.split("").map(element =>{
         if(element === "A"){
             result.push(pair.A)
         }else if(element === "C"){
@@ -26,3 +26,22 @@ function pairElement(str) {
     
   }
   console.log(pairElement("GCG"))
+
+  //=========================================================
+
+  function pairElement(str) {
+    //create object for pair lookup
+    var pairs = {
+      A: "T",
+      T: "A",
+      C: "G",
+      G: "C"
+    };
+    //split string into array of characters
+    var arr = str.split("");
+    //map character to array of character and matching pair
+    return arr.map(x => [x, pairs[x]]);
+  }
+  
+  //test here
+  pairElement("GCG");
