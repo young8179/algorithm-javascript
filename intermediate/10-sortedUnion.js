@@ -11,6 +11,7 @@ Check the assertion tests for examples.
 
 function uniteUnique(arr) {
   const args = Array.prototype.slice.call(arguments)
+  // let arg = [...arguments]
   let bigArray = []
   let result = []
   for (let i = 0; i < args.length; i++) {
@@ -23,7 +24,7 @@ function uniteUnique(arr) {
     }
     
   }
-  return result
+   return result
   }
 
 console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
