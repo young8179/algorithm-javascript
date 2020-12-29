@@ -10,5 +10,20 @@ Check the assertion tests for examples.
  */
 
 function uniteUnique(arr) {
-    return arr;
+  const args = Array.prototype.slice.call(arguments)
+  let bigArray = []
+  let result = []
+  for (let i = 0; i < args.length; i++) {
+    bigArray = bigArray.concat(args[i])
+    
   }
+  for (let j = 0; j < bigArray.length; j++) {
+    if(!result.includes(bigArray[j])){
+      result.push(bigArray[j])
+    }
+    
+  }
+  return result
+  }
+
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
