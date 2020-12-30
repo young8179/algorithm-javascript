@@ -18,10 +18,7 @@ function sumFibs(num) {
     return fib.filter((odd) => odd % 2 !== 0).reduce((a,b)=> a+ b)
     
 }
-        
-    
-    
-  
+
   console.log(sumFibs(75025))
 
   //================================================================
@@ -40,6 +37,5 @@ function sumFibs(num) {
   
     return result;
   }
-  
-  // test here
+
   console.log(sumFibs_1(4))
