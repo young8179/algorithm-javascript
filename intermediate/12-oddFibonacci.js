@@ -8,7 +8,6 @@ For example, sumFibs(10) should return 10 because all odd Fibonacci numbers less
 */
 
 function sumFibs(num) {
-    // let result = 0
     let fib = [1, 1]
     for (let i = 0; i < num; i++) {
         let nextNum = fib[fib.length - 1] + fib[i]
