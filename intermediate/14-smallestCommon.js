@@ -11,38 +11,38 @@ For example, if given 1 and 3, find the smallest common multiple of both 1 and 3
 that is also evenly divisible by all numbers between 1 and 3. The answer here would be 6.
 */
 
-function smallestCommons(arr) {
-    let = btwArray = []
-    arr.sort((a,b)=> a - b)
-    for (let i = arr[0]; i <= arr[1]; i++) {
-        btwArray.push(i)
+// function smallestCommons(arr) { 
+//     let = btwArray = []
+//     arr.sort((a,b)=> a - b)
+//     for (let i = arr[0]; i <= arr[1]; i++) {
+//         btwArray.push(i)
         
-    }
-    let num = btwArray.reduce((a,b) => a * b)
-    console.log(btwArray)
-    let count = 0
-    let result = 0 
-    for (let i = 0; i < num; i++) {
-        for (let j = 0; j < btwArray.length; j++) {
-            if(i % btwArray[j] !== 0){
-                return
-            }else{
-                count ++
-                result = i
+//     }
+//     let num = btwArray.reduce((a,b) => a * b)
+//     console.log(btwArray)
+//     let count = 0
+//     let result = 0 
+//     for (let i = 0; i < num; i++) {
+//         for (let j = 0; j < btwArray.length; j++) {
+//             if(i % btwArray[j] !== 0){
+//                 return
+//             }else{
+//                 count ++
+//                 result = i
 
-            }
+//             }
 
-        }
+//         }
         
-        if(count === btwArray.length){
-            break
-        }
-    }
-    return result
-  }
+//         if(count === btwArray.length){
+//             break
+//         }
+//     }
+//     return result
+//   }
   
   
-  console.log(smallestCommons([10,2]))
+//   console.log(smallestCommons([10,2]))
 
 //=====================================
 function smallestCommons_1(arr) {
