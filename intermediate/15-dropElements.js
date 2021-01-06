@@ -8,10 +8,30 @@ arr should be returned as an empty array.
 */
 
 function dropElements(arr, func) {
-    
-    //remove first element
+    let index = 0
+    let count = 0
+    for (let i = 0; i < arr.length; i++) {
+        if(func(arr[i])){
+            index = arr.indexOf(arr[i])
+            break
+        }else{
+            count ++
+        }
+    }
+    if(count === arr.length){
+        return []
+    }else{
+        return arr.splice(index, arr.length)
+    }
+}
+            
 
-    //map the array and push it to new array if true
-  }
+        
+
+    
+        
+   
+    
+
   
-  console.log(dropElements([1, 2, 3], function(n) {return n < 3; }))
+  console.log(dropElements([1, 2, 3, 4], function(n) {return n > 5;}))
