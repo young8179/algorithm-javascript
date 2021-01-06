@@ -25,7 +25,26 @@ function dropElements(arr, func) {
     }
 }
             
+console.log(dropElements([1, 2, 3, 4], function(n) {return n > 5;}))
+console.log("=================================================")
 
+
+function dropElements_1(arr, func) {
+    // drop them elements.
+    var times = arr.length;
+    // the reason we use times is that it wont change even after we use shift. if we use 
+    // arr.length in for loop, the array will be changed after shift
+    for (var i = 0; i < times; i++) {
+      if (func(arr[0])) {
+        break;
+      } else {
+        arr.shift();
+      }
+    }
+    return arr;
+  }
+
+  console.log(dropElements_1([1, 2, 3, 4], function(n) {return n > 5;}))
         
 
     
@@ -34,4 +53,3 @@ function dropElements(arr, func) {
     
 
   
-  console.log(dropElements([1, 2, 3, 4], function(n) {return n > 5;}))
