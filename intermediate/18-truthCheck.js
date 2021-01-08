@@ -20,11 +20,20 @@ function truthCheck(collection, pre) {
             return count ++
         }
     })
-    if(count === collection.length){
-        return true
-    }else{
-        return false
-    }
+    return count === collection.length
   }
   
   console.log(truthCheck([{"name": "Pete", "onBoat": true}, {"name": "Repeat", "onBoat": true}, {"name": "FastForward", "onBoat": null}], "onBoat"))
+
+
+  console.log("=============other solution==================")
+  function truthCheck_1(collection, pre) {
+    let count = 0
+    return collection.every((object)=>{
+        return object.hasOwnProperty(pre) && Boolean(object[pre])
+        // return object[pre]   it can be more simple answer
+    })
+    
+  }
+  
+  console.log(truthCheck_1([{"name": "Pete", "onBoat": true}, {"name": "Repeat", "onBoat": true}, {"name": "FastForward", "onBoat": null}], "onBoat"))
