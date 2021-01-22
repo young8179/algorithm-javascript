@@ -8,3 +8,5 @@ const items = [
     {id: "b", val: 6, w: 8},
     {id: "c", val: 3, w: 3}
 ]
+
+const maxWeight = 8
