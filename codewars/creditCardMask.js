@@ -7,5 +7,17 @@ Your task is to write a function maskify, which changes all but the last four ch
 */
 
 function maskify(cc) {
-
+   let result = ""
+   if(cc.length > 4 ){
+       for (let i = 0; i < cc.length-4; i++) {
+           result += "#"
+        }
+    return result + cc.slice(-4)   
+   }else{
+       return cc
+   }
+   
+       
 }
+
+console.log(maskify("hello"))
