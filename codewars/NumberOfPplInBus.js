@@ -19,5 +19,22 @@ The second value in the first integer array is 0, since the bus is empty in the 
 */
 
 var number = function(busStops){
-    // Good Luck!
+    let totalIn = 0
+    let totalOff = 0
+    for (let i = 0; i < busStops.length; i++) {
+       totalIn += busStops[i][0]
+       totalOff += busStops[i][1]
+       
+   }
+   return totalIn - totalOff
   }
+
+  console.log(number([[10,0],[3,5],[5,8]]))
+
+  //other solution
+
+  var number = function(busStops){
+    return busStops.map(x => x[0] - x[1]).reduce( (x, y) => x + y);
+  }
+
+  const number = busStops => busStops.reduce((people, stop) => people + stop[0] - stop[1], 0)
