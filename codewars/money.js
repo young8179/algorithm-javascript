@@ -14,5 +14,23 @@ After 3rd Year -->
 */
 
 function calculateYears(principal, interest, tax, desired) {
-    // your code
+   const money =  principal + (principal*interest) - ((principal*interest) * tax)
+   let year = 0
+   if(principal >= desired){
+     return year
+   }else{
+     for (let i = 1; i > 0; i++) {
+      const money =  principal + (principal*interest) - ((principal*interest) * tax)
+      principal = money
+      if(principal >= desired){
+        year = i
+        break;
+       
+     }  
+    }
+
+   }
+  return year
 }
+
+console.log(calculateYears(1000, 0.05, 0.18, 1100)) ;
