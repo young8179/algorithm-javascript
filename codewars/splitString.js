@@ -6,7 +6,6 @@ then it should replace the missing second character of the final pair with an un
 
 function solution(str){
    const strArray = str.split("")
-   let temp = []
    let result = []
    while(strArray.length >= 2){
        let letter = strArray.splice(0,2)
