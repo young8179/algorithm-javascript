@@ -18,3 +18,12 @@ function solution(str){
 }
 
 console.log(solution("abcdef"))
+
+function solution1(str){
+    const arr=[];
+    let newS=str
+    if(str.length%2!=0) {newS=str+"_" }
+    for(let i=0;i<newS.length;i+=2){
+         arr.push(newS.substr(i,2))
+    } return arr
+  }
