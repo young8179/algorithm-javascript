@@ -27,4 +27,47 @@ function solution(number){
         D : 500,
         M : 1000
     }
+    let result = ""
+    let time = 0
+    let standNum = number
+    if(standNum / romanNum.M >= 1){
+        time = Math.floor(number / romanNum.M)
+        result += "M".repeat(time)
+        standNum = number - (romanNum.M * time)
+        
+    }
+    if(standNum / romanNum.D >= 1){
+        time = Math.floor(standNum / romanNum.D)
+        result += "D".repeat(time)
+        standNum = standNum - (romanNum.D * time)
+    }
+    if(standNum / romanNum.C >= 1){
+        time = Math.floor(standNum / romanNum.C)
+        result += "C".repeat(time)
+        standNum = standNum - (romanNum.C * time)
+    }
+    if(standNum / romanNum.L >= 1){
+        time = Math.floor(standNum / romanNum.L)
+        result += "L".repeat(time)
+        standNum = standNum - (romanNum.L * time)
+    }
+    if(standNum / romanNum.X >= 1){
+        time = Math.floor(standNum / romanNum.X)
+        result += "X".repeat(time)
+        standNum = standNum - (romanNum.X * time)
+    }
+    if(standNum / romanNum.V >= 1){
+        time = Math.floor(standNum / romanNum.V)
+        result += "V".repeat(time)
+        standNum = standNum - (romanNum.V * time)
+    }
+    if(standNum / romanNum.I >= 1){
+        time = Math.floor(standNum / romanNum.I)
+        result += "I".repeat(time)
+        standNum = standNum - (romanNum.I * time)
+    }
+    
+    return result
   }
+
+  console.log(solution(3000))
