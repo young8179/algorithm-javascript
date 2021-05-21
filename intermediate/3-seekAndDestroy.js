@@ -1,6 +1,7 @@
 function destroyer(arr) {
     const args = Array.prototype.slice.call(arguments)
     let result = []
+    console.log(args)
     arr.filter(element =>{
         if(!args.includes(element)){
             result.push(element)

@@ -10,8 +10,9 @@ Check the assertion tests for examples.
  */
 
 function uniteUnique(arr) {
-  const args = Array.prototype.slice.call(arguments)
-  // let arg = [...arguments]
+  // const args = Array.prototype.slice.call(arguments)
+  let args = [...arguments]
+  console.log(args)
   let bigArray = []
   let result = []
   for (let i = 0; i < args.length; i++) {
